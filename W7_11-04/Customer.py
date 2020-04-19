@@ -1,21 +1,21 @@
 
-
-import Productcheck
+from Productcheck import *
 
 def buy(product, num, price):
-    if prd2 in Productcheck.check:
-        print(hi)
-        
-prd2 = "juice"
-num2 = 4
-price2 = 10    
-buy(prd1,num1,price1)
+    if check(product, num) is True:
+        print("You bought", product, "and spent", num * price)
+    else:
+        print("Sorry! Weare out of this product")
     
-def main():    
-    pass
 
 
-
+def main():
+    product = input()
+    num = input()
+    price = input()
+    buy(product, num, price)
+    
+    
 
 if __name__ == '__main__':
     main()
